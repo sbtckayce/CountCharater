@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Count Character</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Live Character Counter</h2>
+            <textarea name="text" id="text" cols="30" rows="10" placeholder="Write your text hear"
+            onkeyup="countCharater()"></textarea>
+            <div class="total">
+                <p>Total Character : </p><span>0</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var text =document.querySelector('#text');
+        var count =document.querySelector('.total span');
+
+        function countCharater(){
+            // var countText =text.value.length;
+            var number =text.value.length;
+            // count.innerHTML = number;
+            count.innerHTML = `${number}`;
+
+        }
+    </script>
+</body>
+</html>
